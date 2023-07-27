@@ -33,6 +33,7 @@ void f1() {
 
 		for (int i = 0; i < getRandInt(100, 1000); ++i) /* some work here */;	// critical section
 		for (int i = 0; i < 10; ++i) {
+			Sleep(500);
 			std::cout << "Critical section t1" << std::endl;
 			if (t1in && t2in)
 				std::cout << "Doesn't work!!!" << std::endl;
@@ -64,6 +65,7 @@ void f2() {
 
 		for (int i = 0; i < getRandInt(100, 1000); ++i) /* some work here */;	// critical section
 		for (int i = 0; i < 10; ++i) {
+			Sleep(500);
 			std::cout << "Critical section t2" << std::endl;
 			if (t1in && t2in)
 				std::cout << "Doesn't work!!!" << std::endl;
